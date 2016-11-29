@@ -8,7 +8,7 @@ namespace Algoritms
 {
     public class Program
     {
-        public static int isElementInArray(int[] array, int x)
+        public static int getIndexOfElementInArray(int[] array, int x)
         {
             int left = 0;
             int right = array.Count();
@@ -16,7 +16,7 @@ namespace Algoritms
 
             if (array.Count() != 0 && array != null)
             {
-                while (left < right)
+                while (left <= right)
                 {
                     mid = (right + left) / 2;
                     if (array[mid] == x)
@@ -24,9 +24,9 @@ namespace Algoritms
                     else
                     {
                         if (x < array[mid])
-                            right = mid;
+                            right = mid - 1;
                         else
-                            left = mid;
+                            left = mid + 1;
                     }
                 }
             }
@@ -39,7 +39,7 @@ namespace Algoritms
             int[] a = { 2, 4, 5, 7, 9, 10, 11 };
             int x = 4;
 
-            int index = isElementInArray(a, x);
+            int index = getIndexOfElementInArray(a, x);
 
             Console.WriteLine(index);       
         }
