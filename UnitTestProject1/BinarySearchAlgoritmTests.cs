@@ -5,14 +5,14 @@ using Algoritms;
 namespace Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class BinarySearchAlgoritmTests
     {
         [TestMethod]
         public void FailSearching()
         {
             int[] a = { 1, 5, 7, 45, 890 };
             int x = 4;
-            Assert.AreEqual(-1, Program.getIndexOfElementInArray(a, x));
+            Assert.AreEqual(-1, BinarySearchAlgoritm.getIndexOfElementInArray(a, x));
         }
 
         [TestMethod]
@@ -20,7 +20,7 @@ namespace Tests
         {
             int[] a = { 1, 5, 7, 45, 890 };
             int x = 45;
-            Assert.AreEqual(3, Program.getIndexOfElementInArray(a, x));
+            Assert.AreEqual(3, BinarySearchAlgoritm.getIndexOfElementInArray(a, x));
         }
     }
 }
