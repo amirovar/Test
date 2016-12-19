@@ -10,12 +10,8 @@ namespace Algoritms
     {
         static void Main(string[] args)
         {
-            int[] a = { 2, 4, 5, 7, 9, 10, 11 };
-            int x = 4;
-
-            int index = BinarySearchAlgoritm.getIndexOfElementInArray(a, x);
-
-            Console.WriteLine(index);       
+           Search.SearchingAnElementIntoSortedArray();
+           Trees.MakeBinaryTreeOfSortedArray();
         }
     }
 }
