@@ -10,8 +10,10 @@ namespace Algoritms
     {
         static void Main(string[] args)
         {
-           Search.SearchingAnElementIntoSortedArray();
-           Trees.MakeBinaryTreeOfSortedArray();
+            //Search.SearchingAnElementIntoSortedArray();
+            //Trees.MakeBinaryTreeOfSortedArray();
+            Lists.MergeTwoSortedListToOne();
+            Console.Read();
         }
     }
 }
