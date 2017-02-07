@@ -2,11 +2,51 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Algoritms;
 
-namespace UnitTestProject1
+namespace Tests
 {
     [TestClass]
     public class ListAlgoritmsTests
     {
+        [TestMethod]
+        public void FindLostElementSuccess()
+        {
+            int[] a = { 1, 2, 3, 4, 5 };
+            int[] b = { 1, 2, 4, 5 };
+            int c = 3;
+            int lostEl = Lists.GetLostElement(a, b);
+            Assert.AreEqual(c,lostEl);
+        }
+
+        [TestMethod]
+        public void FindLostElementNullArrays1()
+        {
+            int[] a = { 1, 2, 3, 4, 5 };
+            int[] b = null;
+            int c = -1;
+            int lostEl = Lists.GetLostElement(a, b);
+            Assert.AreEqual(c, lostEl);
+        }
+
+        [TestMethod]
+        public void FindLostElementNullArrays2()
+        {
+            int[] a = { 1 };
+            int[] b = null;
+            int c = 1;
+            int lostEl = Lists.GetLostElement(a, b);
+            Assert.AreEqual(c, lostEl);
+        }
+
+        [TestMethod]
+        public void FindLostElementIncorrectArrays()
+        {
+            int[] a = { 1 };
+            int[] b = { 1, 2, 3, 4, 5 };
+            int c = -1;
+            int lostEl = Lists.GetLostElement(a, b);
+            Assert.AreEqual(c, lostEl);
+        }
+
         [TestMethod]
         public void MergeTwoListToOneSuccess()
         {

@@ -12,7 +12,8 @@ namespace Algoritms
         {
             //Search.SearchingAnElementIntoSortedArray();
             //Trees.MakeBinaryTreeOfSortedArray();
-            Lists.MergeTwoSortedListToOne();
+            //Lists.MergeTwoSortedListToOne();
+            Lists.FindLostElement();
             Console.Read();
         }
     }
