@@ -14,6 +14,7 @@ namespace Algoritms
             //Trees.MakeBinaryTreeOfSortedArray();
             //Lists.MergeTwoSortedListToOne();
             Lists.FindLostElement();
+            NumberTheory.FindTheMostCommonDivizor();
             Console.Read();
         }
     }

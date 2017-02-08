@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Lists.cs" />
     <Compile Include="models\Node.cs" />
+    <Compile Include="NumberTheory.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
