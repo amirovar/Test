@@ -13,8 +13,10 @@ namespace Algoritms
             //Search.SearchingAnElementIntoSortedArray();
             //Trees.MakeBinaryTreeOfSortedArray();
             //Lists.MergeTwoSortedListToOne();
-            Lists.FindLostElement();
-            NumberTheory.FindTheMostCommonDivizor();
+            //Lists.FindLostElement();
+            //NumberTheory.FindTheMostCommonDivizor();
+            Trees.MakeSortedArrayOfBinaryTree();
+            Trees.MakeSortedArrayOfBinaryTree1();
             Console.Read();
         }
     }

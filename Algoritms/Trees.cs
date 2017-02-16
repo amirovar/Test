@@ -29,6 +29,30 @@ namespace Algoritms
         }
 
         /// <summary>
+        /// Construct sorted linked list from binary search tree
+        /// </summary>
+        /// <returns>root</returns>
+        public static void MakeSortedArrayOfBinaryTree()
+        {
+            var list = new List<int>();
+            Track(GetSampleNode(), list);
+            foreach (int i in list)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public static void MakeSortedArrayOfBinaryTree1()
+        {
+            var list = new List<int>();
+            Track1(GetSampleNode(), list);
+            foreach (int i in list)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        /// <summary>
         /// Method to get node 
         /// </summary>
         /// <param name="array"></param>
@@ -51,5 +75,50 @@ namespace Algoritms
             }
             return node;
         }
+
+        /// <summary>
+        /// Track into tree
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="left">index of array</param>
+        /// <param name="right">index of array</param>
+        /// <returns></returns>
+        public static void Track(Node node, List<int> list)
+        {
+            if (node.Left != null)
+                Track(node.Left, list);
+            list.Add(node.Value);
+
+            if (node.Right != null)
+                Track(node.Right, list);
+        }
+
+        public static void Track1(Node node, List<int> list)
+        {
+            if (node == null)
+                return;
+            
+            Track1(node.Left, list);
+            list.Add(node.Value);
+            Track1(node.Right, list);
+        }
+
+        private static Node GetSampleNode()
+        {
+            Node root;
+
+            int[] array = new int[] { 5, 7, 9, 11, 12, 18, 20 };
+
+            root = new Node(11);
+            root.Left = new Node(7);
+            root.Left.Left = new Node(5);
+            root.Left.Right = new Node(9);
+            root.Right = new Node(18);
+            root.Right.Left = new Node(12);
+            root.Right.Right = new Node(20);
+
+            return root;
+        }
+
     }
 }

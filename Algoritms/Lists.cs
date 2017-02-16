@@ -58,7 +58,7 @@ namespace Algoritms
                     return -1;
             }
 
-            if ((a.Length - b.Length) > 1 || (a.Length - b.Length) < 1)
+            if ((a.Length - b.Length) != 1)
             {
                 return -1;
             }

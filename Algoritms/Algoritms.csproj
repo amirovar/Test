@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lists.cs" />
+    <Compile Include="models\ListItem.cs" />
     <Compile Include="models\Node.cs" />
     <Compile Include="NumberTheory.cs" />
     <Compile Include="Search.cs" />
